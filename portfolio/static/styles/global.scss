@@ -1,0 +1,102 @@
+$background-color: #f4f3ee;
+$font-color: #000000;
+$footer-height: 195px;
+$main-with-nav-index: 1;
+
+@font-face {
+    font-family: "Ubuntu Regular";
+    src: url("../fonts/Ubuntu-Light.ttf");
+}
+
+// HTML Elements
+
+* {
+    background-color: $background-color;
+    color: $font-color;
+    font-family: "Ubuntu Regular", Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    font-weight: 100;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+li {
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+span {
+    font-weight: 100;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+// Classes
+
+.pageContainer {
+    margin-bottom: $footer-height;
+}
+
+.mainWithNav {
+    min-height: 100vh;
+    position: relative;
+    z-index: $main-with-nav-index;
+}
+
+.main {
+    padding: 38px 18px;
+    margin: auto;
+    background-color: transparent;
+    position: inherit;
+    max-width: 1750px;
+}
+
+.main * {
+    background-color: transparent;
+}
+
+.title {
+    text-align: center;
+    font-weight: 100;
+    font-size: 4em;
+    margin: 25px auto;
+}
+
+.comingSoon {
+    width: min-content;
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: 100;
+    font-size: 2em;
+    margin: 25px auto;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    span {
+        font-size: 1.25em;
+    }
+}

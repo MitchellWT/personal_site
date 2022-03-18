@@ -1,0 +1,17 @@
+<div class="projectContainer">
+    <div class="{% if left %}leftProject{% else %}rightProject{% endif %}">
+        {% include "./project_brief.html" with project=project_group.0 main=True %}
+    </div>
+
+    <div class="{% if left %}dividerLeft{% else %}dividerRight{% endif %}"></div>
+
+    <div class="{% if left %}rightProject{% else %}leftProject{% endif %}">
+        {% if project_group.1 %}
+            {% include "./project_brief.html" with project=project_group.1 main=False %}
+        {% endif %}
+        <div class="subDivider"></div>
+        {% if project_group.2 %}
+            {% include "./project_brief.html" with project=project_group.2 main=False %}
+        {% endif %}
+    </div>
+</div>

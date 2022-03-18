@@ -1,0 +1,28 @@
+// Classes
+
+.bottom {
+    min-width: 100%;
+}
+
+.bottom > p {
+    text-align: center;
+}
+
+.divider {
+    margin: 66px 0;
+}
+
+.divider > p{
+    font-weight: 100;
+    font-size: 1em;
+    text-align: center;
+}
+
+.emailLink {
+    background-color: #000000;
+    color: #f4f3ee !important;
+}
+
+.emailLink:hover {
+    color: #2a9d8f !important;
+}

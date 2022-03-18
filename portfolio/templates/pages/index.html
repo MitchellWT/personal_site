@@ -1,0 +1,20 @@
+{% extends "../layouts/default.html" %}
+
+{% load static %}
+
+{% block title %}MT | Index{% endblock %}
+
+{% block extra_css %}
+    <link type="text/x-scss" href="{% static 'styles/index.scss' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <h2 class="name title">MITCHELL TSUTSULIS</h2>
+    <img src="{% static 'images/silhouette.png' %}"
+        alt="Portfolio Photo"
+        class="indexImg"/>
+
+    <h2 class="sub title">SOFTWARE DEVELOPER</h2>
+</div>
+{% endblock %}

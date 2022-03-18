@@ -1,0 +1,27 @@
+{% extends "../layouts/default.html" %}
+
+{% load static %}
+
+{% block title %}MT | Contact{% endblock %}
+
+{% block extra_css %}
+    <link type="text/x-scss" href="{% static 'styles/contact.scss' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <div>
+        <h2 class="title">CONTACT</h2>
+
+        <div class="divider">
+            <p>01001000</p>
+            <p>01101001</p>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <p>Want to work together?</p>
+        <p>Email me at <a href="mailto:mitchell444999@protonmail.com" class="emailLink">mitchell444999@protonmail.com</a>.</p>
+    </div>
+</div>
+{% endblock %}

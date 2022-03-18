@@ -1,0 +1,93 @@
+// Mixin
+
+@mixin floatingLayerBase {
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100vw);
+}
+
+// Animation
+
+@keyframes flyIn {
+    from {
+        transform: translateX(-2.5vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+// Classes
+
+.floatingImageContainer {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.floatingContainer {
+    position: relative;
+    height: 300px;
+    width: 220px;
+    margin-right: 90px;
+}
+
+.floatingLayerZero {
+    @include floatingLayerBase;
+    margin: 0px;
+    z-index: 1;
+    animation: floating 2s ease-in-out 1s infinite, flyIn 1s ease-in-out 0s 1;
+}
+
+.floatingLayerOne {
+    @include floatingLayerBase;
+    margin: 15px;
+    z-index: 2;
+    animation: floating 2s ease-in-out 1.5s infinite, flyIn 1s ease-in-out 0.5s 1;
+}
+
+.floatingLayerTwo {
+    @include floatingLayerBase;
+    margin: 30px;
+    z-index: 3;
+    animation: floating 2s ease-in-out 2s infinite, flyIn 1s ease-in-out 1s 1;
+}
+
+.floatingLayerImage {
+    @include floatingLayerBase;
+    margin: 45px;
+    z-index: 4;
+    animation: floating 2s ease-in-out 2.5s infinite, flyIn 1s ease-in-out 1.5s 1;
+}
+
+.aboutTextContainer {
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    max-width: 750px;
+    justify-content: center;
+}
+
+.aboutParagraph {
+    text-align: justify;
+}

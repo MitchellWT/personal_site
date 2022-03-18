@@ -1,0 +1,148 @@
+$nav-index: 10;
+
+// HTML Elements
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #aaaaaa;
+}
+
+a:active {
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+    transition: color 0.1s;
+}
+
+// Classes
+
+.nav {
+    padding: 38px 18px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    position: inherit;
+    z-index: $nav-index;
+    max-width: 1750px;
+    margin: auto;
+}
+
+.nav * {
+    background-color: transparent;
+}
+
+.nav > div > h1 {
+    margin: auto;
+}
+
+.handburgerNav {
+    display: none;
+    margin: auto 0;
+}
+
+.handburgerBun {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.handburgerBun > h1 {
+    margin: auto 10px;
+    color: #aaaaaa;
+}
+
+.handburgerMeat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.handburgerMeat > h1 {
+    margin: 5px 0;
+}
+
+.handburgerLinks:hover {
+    color: #ffffff;
+    transition: color 0.1s;
+}
+
+.handburgerContent {
+    display: none;
+    padding: 8px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: calc(100vw - 16px);
+    min-height: calc(100vh - 16px + 400px);
+    background-color: #101219;
+}
+
+.handburgerContent * {
+    background-color: #101219;
+}
+
+.handburgerOpen {
+    margin: auto 10px;
+    color: #aaaaaa;
+}
+
+.handburgerOpen:active {
+    color: #000000;
+}
+
+.handburgerOpen:hover {
+    color: #000000;
+    transition: color 0.1s;
+}
+
+.handburgerClose {
+    margin: auto 20px !important;
+    color: #aaaaaa;
+}
+
+.handburgerClose:active {
+    color: #ffffff;
+}
+
+.handburgerClose:hover {
+    color: #ffffff;
+    transition: color 0.1s;
+}
+
+
+.rightNav {
+    display: flex;
+
+    h1 {
+        margin: auto 10px !important;
+    }
+}
+
+.activeLink {
+    color: #000000 !important;
+}
+
+.handburgerActiveLink {
+    color: #ffffff !important;
+}
+
+.navItem {
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .handburgerNav {
+        display: inherit;
+    }
+
+    .rightNav {
+        display: none;
+    }
+}

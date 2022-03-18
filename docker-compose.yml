@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+    db:
+        container_name: personal_site_db
+        image: postgres
+        restart: always
+        ports:
+          - 55432:5432
+        environment:
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: personal_site

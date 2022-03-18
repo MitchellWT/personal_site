@@ -1,0 +1,18 @@
+$falling-images-container-index: 1;
+
+.fallingImagesContainer {
+    background-color: transparent;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: $falling-images-container-index;
+
+    * {
+        background-color: transparent;
+    }
+}
+
+.fallingImageText {
+    font-size: 0.5em;
+    z-index: 10;
+}

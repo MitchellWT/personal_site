@@ -1,0 +1,59 @@
+// Classes
+
+.projectContainer {
+    margin: 2%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.leftProject {
+    float: left;
+    height: 100%;
+    width: 49%;
+}
+
+.dividerLeft {
+    float: left;
+    height: 100%;
+    width: 2%;
+}
+
+.rightProject {
+    float: right;
+    height: 100%;
+    width: 49%;
+}
+
+.dividerRight {
+    float: right;
+    height: 100%;
+    width: 2%;
+}
+
+.subDivider {
+    height: 4%;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .projectContainer {
+        height: inherit;
+        overflow: inherit;
+    }
+    
+    .leftProject {
+        float: inherit;
+        width: inherit;
+    }
+
+    .rightProject {
+        float: inherit;
+        width: inherit;
+    }
+
+    .subDivider {
+        display: inline;
+        height: inherit;
+    }
+}

@@ -1,0 +1,45 @@
+$footer-height: 100px;
+$footer-index: 0;
+
+// Classes
+
+.footerContainer {
+    background-color: #ffffff;
+    padding: 38px 18px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: $footer-index;
+    min-height: $footer-height;
+}
+
+.footerContainer * {
+    background-color: #ffffff;
+}
+
+.bottomText {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerText {
+    font-size: 1.5em;
+}
+
+.footerDivider {
+    min-width: 25%;
+    min-height: 1px;
+    background-color: #aaaaaa;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .headerText {
+        font-size: 1.25em;
+    }
+}

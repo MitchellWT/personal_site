@@ -1,0 +1,11 @@
+<a href="/projects/{{ project.slug }}" class="projectMainLink {% if main is False %}projectSubLink{% endif %}">
+    <div class="projectDiv">
+        <img src="{{ project.cover_image.url }}"
+            alt="Cover Image"
+            class="projectImage"/>
+
+        <div class="imageOverlay"></div>
+
+        <h3 class="projectTitle">{{ project.title }}</h3>
+    </div>
+</a>

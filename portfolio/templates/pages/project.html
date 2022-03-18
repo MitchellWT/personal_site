@@ -1,0 +1,39 @@
+{% extends "../layouts/default.html" %}
+
+{% load static %}
+
+{% block title %}MT | {{ project.title }} {% endblock %}
+
+{% block extra_css %}
+    <link type="text/x-scss" href="{% static 'styles/project.scss' %}" rel="stylesheet"/>
+    <link type="text/x-scss" href="{% static 'styles/markdown.scss' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <div class="projectImageContainer">
+        <img src="{{ project.cover_image.url }}"
+            alt="Cover Image"
+            class="projectImage"/>
+    </div>
+
+    <div class="projectTextContainer">
+        <h2 class="title">{{ project.title }}</h2>
+
+        <div>
+            <p class="techHeading">Technology Used</p>
+            <div class="techContainer">
+                {% for technology_used in technologies_used %}
+                    <img src="{{ technology_used.image.url }}"
+                        alt="{{ technology_used.name }}"
+                        class="techIcon"/>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="markdownDiv">
+            {{ body_html }}
+        </div>
+    </div>
+</div>
+{% endblock %}

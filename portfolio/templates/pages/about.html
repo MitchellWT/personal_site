@@ -1,0 +1,39 @@
+{% extends "../layouts/default.html" %}
+
+{% load static %}
+
+{% block title %}MT | About{% endblock %}
+
+{% block extra_css %}
+    <link type="text/x-scss" href="{% static 'styles/about.scss' %}" rel="stylesheet"/>
+    <link type="text/x-scss" href="{% static 'styles/markdown.scss' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <h2 class='title'>ABOUT</h2>
+
+    <div class="floatingImageContainer">
+        <div class="floatingContainer">
+            <img src="{% static 'images/red_frame.png' %}"
+                alt="Floating Frame Zero"
+                class="floatingLayerZero"/>
+            <img src="{% static 'images/blue_frame.png' %}"
+                alt="Floating Frame One"
+                class="floatingLayerOne"/>
+            <img src="{% static 'images/green_frame.png' %}"
+                alt="Floating Frame Two"
+                class="floatingLayerTwo"/>
+            <img src="{% static 'images/front_frame.png' %}"
+                alt="Floating Frame Top"
+                class="floatingLayerImage"/>
+        </div>
+    </div>
+
+    <div class="aboutTextContainer">
+        <div class="markdownDiv">
+            {{ html_body }}
+        </div>
+    </div>
+</div>
+{% endblock %}

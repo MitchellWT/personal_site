@@ -1,0 +1,23 @@
+// Classes
+
+.name {
+    width: min-content;
+}
+
+.indexImg {
+    width: 400px;
+    margin: auto;
+    display: block !important;
+}
+
+.sub {
+    width: min-content;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .indexImg {
+        width: 300px;
+    }
+}

@@ -1,0 +1,46 @@
+
+// Classes
+
+.projectImage {
+    display: block;
+    margin: 0 auto;
+    height: 750px;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projectTextContainer {
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    justify-content: center;
+}
+
+.projectParagraph {
+    text-align: justify;
+}
+
+.techHeading {
+    font-weight: 100;
+}
+
+.techContainer {
+    display: flex;
+    column-gap: 15px;
+    margin: 25px 0;
+}
+
+.techIcon {
+    max-height: 85px;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .techContainer {
+        width: 200px;
+    }
+}

@@ -1,0 +1,58 @@
+// Classes
+
+.projectMainLink {
+    display: block;
+    height: 100%;
+}
+
+.projectSubLink {
+    display: block;
+    height: 48%;
+}
+
+.projectDiv {
+    height: 100%;
+    position: relative;
+}
+
+.projectImage {
+    display: block;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imageOverlay {
+    position: absolute;
+    background-color:#000000 !important;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+:hover.imageOverlay {
+    transition-duration: 0.25s;
+    opacity: 0.5;
+}
+
+.projectTitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #FFFFFF;
+    margin: 25px;
+}
+
+// Mobile
+
+@media only screen and (max-width: 600px) {
+    .projectMainLink {
+        margin: 4% auto;
+    }
+
+    .projectSubLink {
+        margin: 4% auto;
+    }
+}

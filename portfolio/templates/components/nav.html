@@ -1,0 +1,83 @@
+<nav class="nav">
+    <div>
+        <h1 class="navItem">
+            <a href="/" {% if request.path == "/" %}class="activeLink"{% endif %}>INDEX</a>
+        </h1>
+    </div>
+
+    <div class="rightNav">
+        <h1 class="navItem">
+            <a href="/about" {% if request.path == "/about/" %}class="activeLink"{% endif %}>ABOUT</a>
+        </h1>
+        <h1 class="navItem">
+            <a href="/blog" {% if request.path == "/blog/" %}class="activeLink"{% endif %}>BLOG</a>
+        </h1>
+        <h1 class="navItem">
+            <a href="/projects" {% if request.path == "/projects/" %}class="activeLink"{% endif %}>PROJECTS</a>
+        </h1>
+        <h1 class="navItem">
+            <a href="/contact" {% if request.path == "/contact/" %}class="activeLink"{% endif %}>CONTACT</a>
+        </h1>
+    </div>
+
+    <nav class="handburgerNav">
+        <div>
+            <h1 class="handburgerOpen navItem" onclick="toggleState()">MENU</h1>
+        </div>
+
+        <div id="handburgerContent" class="handburgerContent">
+            <div class="handburgerBun">
+                <h1 class="navItem">
+                    <a href="/"
+                        {% if request.path == "/" %}
+                            class="handburgerLinks handburgerActiveLink"
+                        {% else %}
+                            class="handburgerLinks"
+                        {% endif %}
+                    >INDEX</a>
+                </h1>
+
+                <h1 class="handburgerClose navItem" onclick="toggleState()">CLOSE</h1>
+            </div>
+
+            <div class="handburgerMeat">
+                <h1 class="navItem">
+                    <a href="/about"
+                        {% if request.path == "/about/" %}
+                            class="handburgerLinks handburgerActiveLink"
+                        {% else %}
+                            class="handburgerLinks"
+                        {% endif %}
+                    >ABOUT</a>
+                </h1>
+                <h1 class="navItem">
+                    <a href="/blog"
+                        {% if request.path == "/blog/" %}
+                            class="handburgerLinks handburgerActiveLink"
+                        {% else %}
+                            class="handburgerLinks"
+                        {% endif %}
+                    >BLOG</a>
+                </h1>
+                <h1 class="navItem">
+                    <a href="/projects"
+                        {% if request.path == "/projects/" %}
+                            class="handburgerLinks handburgerActiveLink"
+                        {% else %}
+                            class="handburgerLinks"
+                        {% endif %}
+                    >PROJECTS</a>
+                </h1>
+                <h1 class="navItem">
+                    <a href="/contact"
+                        {% if request.path == "/contact/" %}
+                            class="handburgerLinks handburgerActiveLink"
+                        {% else %}
+                            class="handburgerLinks"
+                        {% endif %}
+                    >CONTACT</a>
+                </h1>
+            </div>
+        </div>
+    </nav>
+</nav>
