@@ -30,4 +30,7 @@ urlpatterns = [
     path('projects/', portfolio.views.projects),
     path('projects/<slug:slug>/', portfolio.views.project),
     path('contact/', portfolio.views.contact),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(
+    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(
+    settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
