@@ -20,13 +20,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-atsnobu-chj-&=mf7m)k&*(+0r2bfph68_g4+y8usolp!$2$z!'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True if os.environ['DEBUG'].lower() == 'true' else False
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = ['localhost']
-
 
 # Application definition
 
@@ -80,11 +82,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'personal_site',
-        'HOST': 'localhost',
-        'PORT': '55432',
-        # SECURITY WARNING: change user and password when in production!
-        'USER': 'user',
-        'PASSWORD': 'password',
+        'HOST': os.environ['DB_HOST'],
+        'PORT': '5432',
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASSWORD'],
     }
 }
 
@@ -111,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-au'
 
 TIME_ZONE = 'UTC'
 
