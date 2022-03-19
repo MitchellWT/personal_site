@@ -1,4 +1,7 @@
 
+# Environment files
+db.env
+
 # Ignore static files
 static/
 
