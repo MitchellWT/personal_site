@@ -10,6 +10,7 @@ django-compressor = "*"
 django-libsass = "*"
 markdown = "*"
 psycopg2-binary = "*"
+uwsgi = "*"
 
 [dev-packages]
 
