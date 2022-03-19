@@ -1,5 +1,6 @@
 
 # Environment files
+app.env
 db.env
 
 # Ignore static files
