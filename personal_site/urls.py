@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
+from django.conf.urls import include, handler404
 
 import portfolio.views
 from personal_site import settings
@@ -34,3 +34,6 @@ urlpatterns = [
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(
     settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+handler404 = portfolio.views.error_404
+# handler500 = portfolio.views.error_500
+# handler403 = portfolio.views.error_403

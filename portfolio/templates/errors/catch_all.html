@@ -1,0 +1,10 @@
+{% extends "../layouts/default.html" %}
+
+{% block title %}MT | {{ error_code }}{% endblock %}
+
+{% block main %}
+<div class="main">
+    <h2 class="title">{{ error_code }}</h2>
+    <h3 class="subtitle">{{ description }}</h3>
+</div>
+{% endblock %}
