@@ -10,11 +10,12 @@ RUN apt-get install nginx gcc -y
 
 # Nginx install and setup
 RUN cp personal_site.conf /etc/nginx/sites-enabled/
+RUN update-rc.d nginx enable
 
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD uwsgi --ini uwsgi.ini
+CMD service nginx start && uwsgi --ini uwsgi.ini
 

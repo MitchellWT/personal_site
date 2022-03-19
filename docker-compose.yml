@@ -1,13 +1,25 @@
 version: '3.1'
 
 services:
+    app:
+        container_name: personal_site
+        build: .
+        restart: unless-stopped
+        depends_on:
+            - db
+        networks:
+            - personal-site
+        ports:
+            - 8000:8000
     db:
         container_name: personal_site_db
         image: postgres
-        restart: always
-        ports:
-          - 55432:5432
-        environment:
-            POSTGRES_USER: user
-            POSTGRES_PASSWORD: password
-            POSTGRES_DB: personal_site
+        restart: unless-stopped
+        networks:
+            - personal-site
+        volumes:
+            - ./db-data:/var/lib/postgresql/data
+        env_file:
+            - ./db.env
+networks:
+    personal-site:
