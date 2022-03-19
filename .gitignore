@@ -1,6 +1,6 @@
 
-# Ignore compressor files
-compress/
+# Ignore static files
+static/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django,pycharm
