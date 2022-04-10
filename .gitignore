@@ -3,8 +3,9 @@
 app.env
 db.env
 
-# Ignore static files
-static/
+# Ignore static files and database directory
+app/static/
+db/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django,pycharm

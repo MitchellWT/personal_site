@@ -3,7 +3,7 @@ version: '3.1'
 services:
     app:
         container_name: personal_site
-        build: .
+        build: app/.
         restart: unless-stopped
         depends_on:
             - db
@@ -20,7 +20,7 @@ services:
         networks:
             - personal-site
         volumes:
-            - ./db-data:/var/lib/postgresql/data
+            - ./db:/var/lib/postgresql/data
         env_file:
             - ./db.env
 networks:
