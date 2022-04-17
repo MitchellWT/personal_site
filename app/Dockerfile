@@ -16,5 +16,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD python3 manage.py migrate && python3 manage.py collectstatic && service nginx start && uwsgi --ini uwsgi.ini
+CMD python3 manage.py migrate --noinput && python3 manage.py collectstatic --noinput && service nginx start && uwsgi --ini uwsgi.ini
 
