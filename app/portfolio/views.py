@@ -2,7 +2,7 @@ import markdown
 from django.shortcuts import get_object_or_404, render
 from django.utils.safestring import mark_safe
 
-from portfolio.models import About, Project
+from .models import About, Project
 
 
 def index(request):
