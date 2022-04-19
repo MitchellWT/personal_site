@@ -1,0 +1,32 @@
+{% extends "../layouts/default.html" %}
+
+{% load static %}
+
+{% block title %}MT | Pictures{% endblock %}
+
+{% block extra_css %}
+    <link type="text/x-scss" href="{% static 'styles/picture.scss' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <h2 class="title">PICTURES</h2>
+
+    <div class="pictureContainer">
+        {% for picture in pictures %}
+            <a href="/picture/{{ picture.slug }}" class="smallPictureContainer">
+                <h2 class="marLess">{{ picture.title }}</h2>
+                <img src="{{ picture.picture_image.url }}"
+                     alt="{{ picture.title }}"
+                     class="smallPictureImage"/>
+                <div class="pictureSpaceLine">
+                    <h3 class="marLess">{{ picture.taken_date }}</h3>
+                    <h3 class="marLess">{{ picture.location }}</h3>
+                </div>
+            </a>
+        {% empty %}
+            <h3 class="subtitle">Nothing here...?</h3>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

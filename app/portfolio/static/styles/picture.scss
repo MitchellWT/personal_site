@@ -1,0 +1,84 @@
+// Classes
+
+.pictureContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.smallPictureContainer {
+    max-width: 720px;
+}
+
+.smallPictureImage {
+    max-width: 720px;
+    display: block;
+}
+
+.bigPictureContainer {
+    max-width: 1080px;
+}
+
+.bigPictureImage {
+    max-width: 1080px;
+    display: block;
+}
+
+.pictureSpaceLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pictureSpaceLine > h3 {
+    font-size: 1.5em;
+}
+
+.marLess {
+    margin: 10px 0;
+}
+
+.subjectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.socialLink {
+    background-color: #000000;
+    color: #f4f3ee !important;
+}
+
+.socialLink:hover {
+    color: #552a9d !important;
+}
+
+.downloadLink {
+    font-size: 1.5em;
+    background-color: #000000;
+    color: #f4f3ee !important;
+}
+
+.downloadLink:hover {
+    color: #9d2a38 !important;
+}
+
+// Mobile
+
+@media only screen and (max-width: 750px) {
+    .smallPictureContainer {
+        max-width: 100%;
+    }
+
+    .smallPictureImage {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    .bigPictureContainer {
+        max-width: 100%;
+    }
+
+    .bigPictureImage {
+        max-width: 100%;
+    }
+}

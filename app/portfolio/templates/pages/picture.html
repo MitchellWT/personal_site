@@ -1,0 +1,37 @@
+{% extends "../layouts/default.html" %}
+
+{% load static %}
+
+{% block title %}MT | {{ picture.title }} {% endblock %}
+
+{% block extra_css %}
+    <link type="text/x-scss" href="{% static 'styles/picture.scss' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <h2 class="title">{{ picture.title }}</h2>
+
+    <div class="pictureContainer">
+        <div class="bigPictureContainer">
+            <div class="pictureSpaceLine">
+                <h3 class="marLess">{{ picture.taken_date }}</h3>
+                <h3 class="marLess">{{ picture.location }}</h3>
+            </div>
+            <img src="{{ picture.picture_image.url }}"
+                 alt="{{ picture.title }}"
+                 class="bigPictureImage"/>
+            <div class="marLess subjectContainer">
+                {% for subject in subjects %}
+                    <span>{{ subject.name }}
+                        {% if subject.social_link %}
+                            <a href="{{ subject.social_link }}" class="socialLink">@{% if subject.display_name %}{{ subject.display_name }}{% else %}{{ subject.social_link }}{% endif %}</a>
+                        {% endif %}
+                    </span>
+                {% endfor %}
+            </div>
+            <a href="{{ picture.picture_image.url }}" class="marLess downloadLink">Download Image</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
