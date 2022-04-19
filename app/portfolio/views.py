@@ -2,7 +2,7 @@ import markdown
 from django.shortcuts import get_object_or_404, render
 from django.utils.safestring import mark_safe
 
-from .models import About, Project
+from .models import About, Project, Picture
 
 
 def index(request):
@@ -57,6 +57,25 @@ def contact(request):
     return render(request, "pages/contact.html")
 
 
+def pictures(request, page=1):
+    limit = 10
+    offset = (page - 1) * limit
+    pictures = list(Picture.objects.order_by("taken_date")[offset:limit])
+    return render(request, "pages/pictures.html", {
+        "pictures": pictures,
+        "page": page
+    })
+
+
+def picture(request, slug):
+    picture = get_object_or_404(Picture, slug=slug)
+    subjects = picture.subjects.all()
+    return render(request, "pages/picture.html", {
+        "picture": picture,
+        "subjects": subjects
+    })
+
+
 def error_404(request, exception):
     return render(request, "errors/catch_all.html", {
         "error_code": "404",
@@ -64,7 +83,7 @@ def error_404(request, exception):
     }, status=404)
 
 
-def error_500(request, exception):
+def error_500(request):
     return render(request, "errors/catch_all.html", {
         "error_code": "500",
         "description": "Sorry it looks like our system is having some issues!",
