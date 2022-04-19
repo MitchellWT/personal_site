@@ -13,6 +13,9 @@
             <a href="/blog" {% if request.path == "/blog/" %}class="activeLink"{% endif %}>BLOG</a>
         </h1>
         <h1 class="navItem">
+            <a href="/pictures" {% if request.path == "/pictures/" %}class="activeLink"{% endif %}>PICTURES</a>
+        </h1>
+        <h1 class="navItem">
             <a href="/projects" {% if request.path == "/projects/" %}class="activeLink"{% endif %}>PROJECTS</a>
         </h1>
         <h1 class="navItem">
@@ -58,6 +61,15 @@
                             class="handburgerLinks"
                         {% endif %}
                     >BLOG</a>
+                </h1>
+                <h1 class="navItem">
+                    <a href="/pictures"
+                       {% if request.path == "/pictures/" %}
+                            class="handburgerLinks handburgerActiveLink"
+                       {% else %}
+                            class="handburgerLinks"
+                       {% endif %}
+                    >PICTURES</a>
                 </h1>
                 <h1 class="navItem">
                     <a href="/projects"
