@@ -9,7 +9,7 @@ class Picture(models.Model):
     slug = CharField(max_length=69)
     location = CharField(max_length=169)
     taken_date = DateField()
-    subjects = ManyToManyField('Subject')
+    subjects = ManyToManyField('Subject', blank=True)
 
     def __str__(self):
         return self.title
