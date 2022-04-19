@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import path
-from django.conf.urls import include, handler404
+from django.conf.urls import include
 
 import portfolio.views
 from personal_site import settings
@@ -29,11 +30,15 @@ urlpatterns = [
     path('blog/', portfolio.views.blog),
     path('projects/', portfolio.views.projects),
     path('projects/<slug:slug>/', portfolio.views.project),
+    path('pictures/', portfolio.views.pictures),
+    path('pictures/<int:page>/', portfolio.views.pictures),
+    path('picture/<slug:slug>/', portfolio.views.picture),
     path('contact/', portfolio.views.contact),
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(
     settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = portfolio.views.error_404
-# handler500 = portfolio.views.error_500
-# handler403 = portfolio.views.error_403
+handler500 = portfolio.views.error_500
+handler403 = portfolio.views.error_403
+handler400 = portfolio.views.error_400
