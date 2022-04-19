@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from portfolio.models import About, Project, TechnologyUsed
+from .models import About, Project, TechnologyUsed, Subject, Picture
 
 
 @admin.register(About)
@@ -15,4 +15,14 @@ class ProjectAdmin(admin.ModelAdmin):
 
 @admin.register(TechnologyUsed)
 class TechnologyUsedAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Picture)
+class Picture(admin.ModelAdmin):
+    exclude = ('slug',)
+
+
+@admin.register(Subject)
+class Subject(admin.ModelAdmin):
     pass
