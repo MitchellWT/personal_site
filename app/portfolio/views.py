@@ -58,12 +58,18 @@ def contact(request):
 
 
 def pictures(request, page=1):
-    limit = 10
-    offset = (page - 1) * limit
-    pictures = list(Picture.objects.order_by("taken_date")[offset:limit])
+    perPage = 5
+    limit = page * perPage
+    offset = (page - 1) * perPage
+    pictures = list(Picture.objects.order_by("-taken_date")[offset:limit])
+    totalCount = Picture.objects.count()
+    prev = 0 if offset < 1 else page - 1
+    next = 0 if limit >= totalCount else page + 1
     return render(request, "pages/pictures.html", {
         "pictures": pictures,
-        "page": page
+        "page": page,
+        "prev": prev,
+        "next": next
     })
 
 
