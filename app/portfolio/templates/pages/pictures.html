@@ -25,8 +25,30 @@
                 </div>
             </a>
         {% empty %}
+            <style>
+              .pictureContainer {
+                display: inherit;
+              }
+            </style>
             <h3 class="subtitle">Nothing here...?</h3>
         {% endfor %}
+    </div>
+
+    <div class="paginationContainer">
+        <div>
+            {% if prev %}
+                <a href="/pictures/{{ prev }}">
+                    <h2>PREV</h2>
+                </a>
+            {% endif %}
+        </div>
+        <div>
+            {% if next %}
+                <a href="/pictures/{{ next }}">
+                    <h2>NEXT</h2>
+                </a>
+            {% endif %}
+        </div>
     </div>
 </div>
 {% endblock %}

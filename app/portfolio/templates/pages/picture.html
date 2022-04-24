@@ -28,6 +28,12 @@
                             <a href="{{ subject.social_link }}" class="socialLink">@{% if subject.display_name %}{{ subject.display_name }}{% else %}{{ subject.social_link }}{% endif %}</a>
                         {% endif %}
                     </span>
+                {% empty %}
+                    <style>
+                        .subjectContainer {
+                          margin: 10px 0 0 0;
+                        }
+                    </style>
                 {% endfor %}
             </div>
             <a href="{{ picture.picture_image.url }}" class="marLess downloadLink">Download Image</a>

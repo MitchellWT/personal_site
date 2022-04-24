@@ -2,11 +2,13 @@
 
 .pictureContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 .smallPictureContainer {
     max-width: 720px;
+    margin: auto;
 }
 
 .smallPictureImage {
@@ -16,11 +18,20 @@
 
 .bigPictureContainer {
     max-width: 1080px;
+    margin: auto;
 }
 
 .bigPictureImage {
     max-width: 1080px;
     display: block;
+}
+
+.paginationContainer {
+    max-width: 720px;
+    margin: auto;
+    text-decoration: underline;
+    display: flex;
+    justify-content: space-between;
 }
 
 .pictureSpaceLine {
@@ -70,6 +81,10 @@
 
     .smallPictureImage {
         max-width: 100%;
+    }
+
+    .paginationContainer {
+      max-width: 100%;
     }
 }
 
