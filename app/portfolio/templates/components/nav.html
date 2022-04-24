@@ -7,19 +7,19 @@
 
     <div class="rightNav">
         <h1 class="navItem">
-            <a href="/about" {% if request.path == "/about/" %}class="activeLink"{% endif %}>ABOUT</a>
+            <a href="/about/" {% if request.path == "/about/" %}class="activeLink"{% endif %}>ABOUT</a>
         </h1>
         <h1 class="navItem">
-            <a href="/blog" {% if request.path == "/blog/" %}class="activeLink"{% endif %}>BLOG</a>
+            <a href="/blog/" {% if request.path == "/blog/" %}class="activeLink"{% endif %}>BLOG</a>
         </h1>
         <h1 class="navItem">
-            <a href="/pictures" {% if request.path == "/pictures/" %}class="activeLink"{% endif %}>PICTURES</a>
+            <a href="/pictures/" {% if "/pictures/" in request.path %}class="activeLink"{% endif %}>PICTURES</a>
         </h1>
         <h1 class="navItem">
-            <a href="/projects" {% if request.path == "/projects/" %}class="activeLink"{% endif %}>PROJECTS</a>
+            <a href="/projects/" {% if request.path == "/projects/" %}class="activeLink"{% endif %}>PROJECTS</a>
         </h1>
         <h1 class="navItem">
-            <a href="/contact" {% if request.path == "/contact/" %}class="activeLink"{% endif %}>CONTACT</a>
+            <a href="/contact/" {% if request.path == "/contact/" %}class="activeLink"{% endif %}>CONTACT</a>
         </h1>
     </div>
 
@@ -45,7 +45,7 @@
 
             <div class="handburgerMeat">
                 <h1 class="navItem">
-                    <a href="/about"
+                    <a href="/about/"
                         {% if request.path == "/about/" %}
                             class="handburgerLinks handburgerActiveLink"
                         {% else %}
@@ -54,7 +54,7 @@
                     >ABOUT</a>
                 </h1>
                 <h1 class="navItem">
-                    <a href="/blog"
+                    <a href="/blog/"
                         {% if request.path == "/blog/" %}
                             class="handburgerLinks handburgerActiveLink"
                         {% else %}
@@ -63,8 +63,8 @@
                     >BLOG</a>
                 </h1>
                 <h1 class="navItem">
-                    <a href="/pictures"
-                       {% if request.path == "/pictures/" %}
+                    <a href="/pictures/"
+                       {% if "/pictures/" in request.path %}
                             class="handburgerLinks handburgerActiveLink"
                        {% else %}
                             class="handburgerLinks"
@@ -72,7 +72,7 @@
                     >PICTURES</a>
                 </h1>
                 <h1 class="navItem">
-                    <a href="/projects"
+                    <a href="/projects/"
                         {% if request.path == "/projects/" %}
                             class="handburgerLinks handburgerActiveLink"
                         {% else %}
@@ -81,7 +81,7 @@
                     >PROJECTS</a>
                 </h1>
                 <h1 class="navItem">
-                    <a href="/contact"
+                    <a href="/contact/"
                         {% if request.path == "/contact/" %}
                             class="handburgerLinks handburgerActiveLink"
                         {% else %}
