@@ -33,6 +33,11 @@ SECURE_HSTS_PRELOAD = False if os.environ['DEPLOYMENT'].lower() == 'false' else 
 SECURE_HSTS_SECONDS = 0 if os.environ['DEPLOYMENT'].lower() == 'false' else 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = False if os .environ['DEPLOYMENT'].lower() == 'false' else True
 
+# Limit settings
+
+# Max upload of 20 MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 20971520
+
 # Application definition
 
 INSTALLED_APPS = [
