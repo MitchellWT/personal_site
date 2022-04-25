@@ -33,6 +33,15 @@
 
 .markdownDiv p {
     text-align: justify;
+    margin: 25px 0;
+}
+
+.markdownDiv a {
+    color: #000000;
+}
+
+.markdownDiv a:hover {
+    text-decoration: underline;
 }
 
 .markdownDiv img {
