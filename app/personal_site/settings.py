@@ -25,7 +25,7 @@ DEBUG = True if os.environ['DEBUG'].lower() == 'true' else False
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
 
 SECURE_SSL_REDIRECT = False if os.environ['DEPLOYMENT'].lower() == 'false' else True
 
