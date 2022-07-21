@@ -22,7 +22,7 @@ def blog(request):
 
 
 def projects(request):
-    projects = list(Project.objects.all())
+    projects = list(Project.objects.all().order_by("-id"))
     project_groups = []
     project_group = []
     count = 0
