@@ -1,4 +1,4 @@
-docker-build-and-push:
+build-and-push:
   image: docker:latest
   stage: build
   services:
@@ -10,7 +10,7 @@ docker-build-and-push:
     - docker push registry.mitchelltsutsulis.com/mitchellwt/personal_site
 
 deploy:
-  needs: [docker-build-and-push]
+  needs: [build-and-push]
   image: docker:git
   stage: deploy
   script: 
