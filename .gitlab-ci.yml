@@ -14,7 +14,7 @@ deploy:
   image: docker:git
   stage: deploy
   script: 
-    - git clone https://$GIT_USER:$GIT_TOKEN@gitlab.mitchelltsutsulis.com/MitchellWT/personal_site_deployment.git -o deployment
+    - git clone https://$GIT_USER:$GIT_TOKEN@gitlab.mitchelltsutsulis.com/mitchellwt/personal_site_deployment.git deployment
     - cd deployment
     - docker compose down
     - docker compose up -d
