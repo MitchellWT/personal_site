@@ -11,8 +11,11 @@ docker-build-and-push:
 
 deploy:
   needs: [docker-build-and-push]
-  image: alpine/git:latest
+  image: docker:latest
   stage: deploy
+  services:
+    - name: alpine/git:latest
+      alias: git
   script:
     - git clone https://gitlab.mitchelltsutsulis.com/MitchellWT/personal_site_deployment.git
     - docker compose down
