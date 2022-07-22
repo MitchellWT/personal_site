@@ -1,3 +1,7 @@
+stages:
+  - docker-build-and-push
+  - deploy
+
 docker-build-and-push:
   image: docker:latest
   stage: build
@@ -8,3 +12,10 @@ docker-build-and-push:
     - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD registry.mitchelltsutsulis.com
     - docker build -t registry.mitchelltsutsulis.com/mitchellwt/personal_site .
     - docker push registry.mitchelltsutsulis.com/mitchellwt/personal_site
+
+deploy:
+  stage: deploy
+  script:
+    - git clone https://gitlab.mitchelltsutsulis.com/MitchellWT/personal_site_deployment.git
+    - docker compose down
+    - docker compose up -d
