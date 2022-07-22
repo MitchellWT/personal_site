@@ -1,0 +1,54 @@
+/* line 4, app/portfolio/static/styles/markdown.scss */
+.markdownDiv h1 {
+  font-size: 4em;
+  margin: 0.83em 0; }
+
+/* line 9, app/portfolio/static/styles/markdown.scss */
+.markdownDiv h2 {
+  font-size: 3.5em;
+  margin: 0.83em 0; }
+
+/* line 14, app/portfolio/static/styles/markdown.scss */
+.markdownDiv h3 {
+  font-size: 3em;
+  margin: 0.83em 0; }
+
+/* line 19, app/portfolio/static/styles/markdown.scss */
+.markdownDiv h4 {
+  font-size: 2.5em;
+  margin: 0.83em 0; }
+
+/* line 24, app/portfolio/static/styles/markdown.scss */
+.markdownDiv h5 {
+  font-size: 2em;
+  margin: 0.83em 0; }
+
+/* line 29, app/portfolio/static/styles/markdown.scss */
+.markdownDiv h6 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+/* line 34, app/portfolio/static/styles/markdown.scss */
+.markdownDiv p {
+  text-align: justify;
+  margin: 25px 0; }
+
+/* line 39, app/portfolio/static/styles/markdown.scss */
+.markdownDiv a {
+  color: #000000; }
+
+/* line 43, app/portfolio/static/styles/markdown.scss */
+.markdownDiv a:hover {
+  text-decoration: underline; }
+
+/* line 47, app/portfolio/static/styles/markdown.scss */
+.markdownDiv img {
+  width: 100%; }
+
+/* line 51, app/portfolio/static/styles/markdown.scss */
+.markdownDiv code {
+  font-family: revert; }
+
+/* line 55, app/portfolio/static/styles/markdown.scss */
+.markdownDiv strong {
+  font-weight: bold; }

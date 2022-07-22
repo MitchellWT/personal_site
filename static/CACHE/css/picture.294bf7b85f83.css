@@ -1,0 +1,90 @@
+/* line 3, app/portfolio/static/styles/picture.scss */
+.pictureContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+/* line 9, app/portfolio/static/styles/picture.scss */
+.smallPictureContainer {
+  max-width: 720px;
+  margin: auto; }
+
+/* line 14, app/portfolio/static/styles/picture.scss */
+.smallPictureImage {
+  max-width: 720px;
+  display: block; }
+
+/* line 19, app/portfolio/static/styles/picture.scss */
+.bigPictureContainer {
+  max-width: 1080px;
+  margin: auto; }
+
+/* line 24, app/portfolio/static/styles/picture.scss */
+.bigPictureImage {
+  max-width: 1080px;
+  display: block; }
+
+/* line 29, app/portfolio/static/styles/picture.scss */
+.paginationContainer {
+  max-width: 720px;
+  margin: auto;
+  text-decoration: underline;
+  display: flex;
+  justify-content: space-between; }
+
+/* line 37, app/portfolio/static/styles/picture.scss */
+.pictureSpaceLine {
+  display: flex;
+  justify-content: space-between; }
+
+/* line 42, app/portfolio/static/styles/picture.scss */
+.pictureSpaceLine > h3 {
+  font-size: 1.5em; }
+
+/* line 46, app/portfolio/static/styles/picture.scss */
+.marLess {
+  margin: 10px 0; }
+
+/* line 50, app/portfolio/static/styles/picture.scss */
+.subjectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; }
+
+/* line 56, app/portfolio/static/styles/picture.scss */
+.socialLink {
+  background-color: #000000;
+  color: #f4f3ee !important; }
+
+/* line 61, app/portfolio/static/styles/picture.scss */
+.socialLink:hover {
+  color: #552a9d !important; }
+
+/* line 65, app/portfolio/static/styles/picture.scss */
+.downloadLink {
+  font-size: 1.5em;
+  background-color: #000000;
+  color: #f4f3ee !important; }
+
+/* line 71, app/portfolio/static/styles/picture.scss */
+.downloadLink:hover {
+  color: #9d2a38 !important; }
+
+@media only screen and (max-width: 750px) {
+  /* line 78, app/portfolio/static/styles/picture.scss */
+  .smallPictureContainer {
+    max-width: 100%; }
+  /* line 82, app/portfolio/static/styles/picture.scss */
+  .smallPictureImage {
+    max-width: 100%; }
+  /* line 86, app/portfolio/static/styles/picture.scss */
+  .paginationContainer {
+    max-width: 100%; } }
+
+@media only screen and (max-width: 1110px) {
+  /* line 92, app/portfolio/static/styles/picture.scss */
+  .bigPictureContainer {
+    max-width: 100%; }
+  /* line 96, app/portfolio/static/styles/picture.scss */
+  .bigPictureImage {
+    max-width: 100%; } }
