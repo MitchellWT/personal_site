@@ -11,10 +11,10 @@ docker-build-and-push:
 
 deploy:
   needs: [docker-build-and-push]
-  image: alpine:latest
+  image: docker:git
   stage: deploy
-  script:
-    - apk add git docker 
-    - git clone https://gitlab.mitchelltsutsulis.com/MitchellWT/personal_site_deployment.git
+  script: 
+    - git clone https://$GIT_USER:$GIT_TOKEN@gitlab.mitchelltsutsulis.com/MitchellWT/personal_site_deployment.git -o deployment
+    - cd deployment
     - docker compose down
     - docker compose up -d
