@@ -1,5 +1,5 @@
 docker-build-and-push:
-  image: alpine:latest
+  image: docker:latest
   stage: build
   services:
     - docker:dind
@@ -9,10 +9,12 @@ docker-build-and-push:
     - docker build -t registry.mitchelltsutsulis.com/mitchellwt/personal_site .
     - docker push registry.mitchelltsutsulis.com/mitchellwt/personal_site
 
-#deploy:
-#  needs: [docker-build-and-push]
-#  stage: deploy
-#  script:
-#    - git clone https://gitlab.mitchelltsutsulis.com/MitchellWT/personal_site_deployment.git
-#    - docker compose down
-#    - docker compose up -d
+deploy:
+  needs: [docker-build-and-push]
+  stage: deploy
+  services:
+    - git:latest
+  script:
+    - git clone https://gitlab.mitchelltsutsulis.com/MitchellWT/personal_site_deployment.git
+    - docker compose down
+    - docker compose up -d
