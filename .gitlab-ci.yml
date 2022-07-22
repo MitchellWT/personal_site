@@ -4,7 +4,6 @@ build-and-push:
   services:
     - docker:dind
   script:
-    - cd app
     - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD registry.mitchelltsutsulis.com
     - docker build -t registry.mitchelltsutsulis.com/mitchellwt/personal_site .
     - docker push registry.mitchelltsutsulis.com/mitchellwt/personal_site
