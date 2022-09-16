@@ -1,6 +1,8 @@
 build-and-push:
   image: docker:latest
   stage: build
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
   services:
     - docker:dind
   script:
@@ -12,6 +14,8 @@ deploy:
   needs: [build-and-push]
   image: docker:git
   stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
   script: 
     - git clone https://$GIT_USER:$GIT_TOKEN@gitlab.mitchelltsutsulis.com/mitchellwt/personal_site_deployment.git deployment
     - cd deployment
